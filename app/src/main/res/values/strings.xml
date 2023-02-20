@@ -4,4 +4,7 @@
     <string name="Btnfilter">FIltro</string>
     <string name="btn_consult">Consultar</string>
     <string name="tv_filter">Filter</string>
+    <string name="tvMagnitud">Magnitud</string>
+    <string name="tvCountry">Paises</string>
+    <string name="btn_accept">Aceptar</string>
 </resources>
