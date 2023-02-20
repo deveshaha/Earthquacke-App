@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ProyectoAADT2_DeveshHanumante</string>
+    <string name="tv_title">Terremotos</string>
+    <string name="Btnfilter">FIltro</string>
+    <string name="btn_consult">Consultar</string>
+    <string name="tv_filter">Filter</string>
+</resources>
