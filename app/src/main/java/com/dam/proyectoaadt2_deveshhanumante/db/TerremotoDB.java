@@ -5,11 +5,15 @@ import android.content.Context;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
+import com.dam.proyectoaadt2_deveshhanumante.dao.AfectadosDAO;
 import com.dam.proyectoaadt2_deveshhanumante.dao.TerremotosDao;
 
+@androidx.room.Database(entities = {com.dam.proyectoaadt2_deveshhanumante.entity.Terremotos.class, com.dam.proyectoaadt2_deveshhanumante.entity.PaisAfectado.class}, version = 1)
 public abstract class TerremotoDB extends RoomDatabase {
 
     public abstract TerremotosDao terremotosDao();
+
+    public abstract AfectadosDAO afectadosDAO();
 
     private static TerremotoDB terremotoDB;
 

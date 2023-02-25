@@ -1,5 +1,6 @@
 package com.dam.proyectoaadt2_deveshhanumante.entity;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
@@ -11,9 +12,11 @@ import androidx.room.ForeignKey;
 
 public class PaisAfectado {
 
+    @NonNull
     @ColumnInfo(name = "fecha")
     public String fechayhora;
 
+    @NonNull
     @ColumnInfo(name = "pais")
     public String pais;
 

@@ -1,5 +1,6 @@
 package com.dam.proyectoaadt2_deveshhanumante.entity;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.ColumnInfo;
@@ -9,7 +10,9 @@ import java.sql.Date;
 @Entity(tableName = "TERREMOTOS")
 public class Terremotos {
 
-    @androidx.room.PrimaryKey(autoGenerate = true)
+    @PrimaryKey
+    @NonNull
+    @ColumnInfo(name = "fechayhora")
     public String fechayhora;
 
     @ColumnInfo(name = "magnitud")

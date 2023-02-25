@@ -3,4 +3,5 @@
     <dimen name="global_padding">16dp</dimen>
     <dimen name="tv_title">33sp</dimen>
     <dimen name="dialog_padding">32dp</dimen>
+    <dimen name="text_size">24sp</dimen>
 </resources>

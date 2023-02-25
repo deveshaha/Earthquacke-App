@@ -50,24 +50,12 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/tv_filter"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/tv_filter"
-        android:gravity="center"
-        android:textSize="@dimen/tv_title"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@+id/ll_buttons">
-
-    </TextView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/rv_list"
-        app:layout_constraintTop_toBottomOf="@+id/tv_filter"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/ll_buttons">
 
     </androidx.recyclerview.widget.RecyclerView>
 
