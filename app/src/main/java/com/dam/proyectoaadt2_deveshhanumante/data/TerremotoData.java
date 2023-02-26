@@ -1,5 +1,6 @@
 package com.dam.proyectoaadt2_deveshhanumante.data;
 
+import com.dam.proyectoaadt2_deveshhanumante.db.TerremotoDB;
 import com.dam.proyectoaadt2_deveshhanumante.entity.Terremotos;
 
 import java.util.ArrayList;
@@ -94,5 +95,13 @@ public class TerremotoData {
 
     public static ArrayList<Terremotos> getListaTerremotos() {
         return listaTerremotos;
+    }
+
+    public Terremotos[] getTerremotos() {
+        Terremotos[] terremotos = new Terremotos[listaTerremotos.size()];
+        for (int i = 0; i < listaTerremotos.size(); i++) {
+            terremotos[i] = listaTerremotos.get(i);
+        }
+        return terremotos;
     }
 }

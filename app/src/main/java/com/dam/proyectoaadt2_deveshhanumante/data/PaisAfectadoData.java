@@ -1,5 +1,6 @@
 package com.dam.proyectoaadt2_deveshhanumante.data;
 
+import com.dam.proyectoaadt2_deveshhanumante.db.TerremotoDB;
 import com.dam.proyectoaadt2_deveshhanumante.entity.PaisAfectado;
 
 import java.lang.reflect.Array;
@@ -45,5 +46,13 @@ public class PaisAfectadoData {
 
     public static ArrayList<PaisAfectado> getListaPaises() {
         return listaPaises;
+    }
+
+    public PaisAfectado[] getPaisesAfectados() {
+        PaisAfectado[] paises = new PaisAfectado[listaPaises.size()];
+        for (int i = 0; i < listaPaises.size(); i++) {
+            paises[i] = listaPaises.get(i);
+        }
+        return paises;
     }
 }

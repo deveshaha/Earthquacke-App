@@ -7,6 +7,7 @@ import androidx.room.RoomDatabase;
 
 import com.dam.proyectoaadt2_deveshhanumante.dao.AfectadosDAO;
 import com.dam.proyectoaadt2_deveshhanumante.dao.TerremotosDao;
+import com.dam.proyectoaadt2_deveshhanumante.entity.Terremotos;
 
 @androidx.room.Database(entities = {com.dam.proyectoaadt2_deveshhanumante.entity.Terremotos.class, com.dam.proyectoaadt2_deveshhanumante.entity.PaisAfectado.class}, version = 1)
 public abstract class TerremotoDB extends RoomDatabase {
