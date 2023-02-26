@@ -7,4 +7,5 @@
     <string name="tvMagnitud">Magnitud</string>
     <string name="tvCountry">Paises</string>
     <string name="btn_accept">Aceptar</string>
+    <string name="hintMagFilter">Magnitud</string>
 </resources>

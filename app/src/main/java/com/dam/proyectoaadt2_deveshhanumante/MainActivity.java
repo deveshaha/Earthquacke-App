@@ -24,6 +24,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     Button btnFilter, btnConsult;
+    TextView tvFilter;
     RecyclerView rv;
     TerremotoDB db;
     AfectadosDAO aDao;
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnFilter = findViewById(R.id.btnSelectFilter);
         btnConsult = findViewById(R.id.btnConsult);
+        tvFilter = findViewById(R.id.tvFilter);
         rv = findViewById(R.id.rv_list);
 
         cargarBbdd();
@@ -82,7 +84,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void ordenarTerremotos(){
+    private void ordenarTerremotos() {
+        tvFilter.setText("Todos los terremotos ordenados por magnitud");
         for (int i = 0; i < listaTerremotos.size(); i++) {
             for (int j = 0; j < listaTerremotos.size(); j++) {
                 if (listaTerremotos.get(i).getMagnitud() > listaTerremotos.get(j).getMagnitud()) {
@@ -104,7 +107,25 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void showfilter() {
+        cargarSpinners();
         FilterDialog fdiag = new FilterDialog();
         fdiag.show(getSupportFragmentManager(), "FilterDialog");
+    }
+
+    private void cargarSpinners() {
+        ArrayList<String> paises = new ArrayList<>();
+        for (PaisAfectado p : listaPaises) {
+            paises.add(p.pais);
+        }
+        FilterDialog.setPaises(paises);
+
+        ArrayList<String> magnitudesFilter = new ArrayList<>();
+        magnitudesFilter.add(0, "Ninguno");
+        magnitudesFilter.add(1, "<");
+        magnitudesFilter.add(2, ">");
+        magnitudesFilter.add(3, "=");
+        magnitudesFilter.add(4, "<=");
+        magnitudesFilter.add(5, ">=");
+        FilterDialog.setMagnitudes(magnitudesFilter);
     }
 }
